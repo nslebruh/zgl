@@ -19,9 +19,7 @@ pub const ErrorHandling = enum {
     none,
 };
 
-const error_handling: ErrorHandling =
-    std.meta.globalOption("opengl_error_handling", ErrorHandling) orelse
-    if (std.debug.runtime_safety) .assert else .none;
+const error_handling: ErrorHandling = if (std.debug.runtime_safety) .assert else .none;
 
 /// Checks if a OpenGL error happend and may yield it.
 /// This function is configurable via `opengl_error_handling` in the root file.
