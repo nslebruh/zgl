@@ -1,5 +1,5 @@
 .{
-    .paths = .{""},
+    .paths = .{"./zgl.zig", "./types.zig", "./binding.zig", "./build.zig", "./build.zig.zon"},
     .name = "zgl",
     .version = "0.0.0"
 }
